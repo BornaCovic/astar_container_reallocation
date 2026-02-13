@@ -1,0 +1,8 @@
+U ulaz.txt popuniti zeljeno pocetno stanje ovisno za inacicu koji zelite simulirati (pogledati format ulaznih datoteka u dokumentaciji za obe inacice).
+
+U direktoriju za generiranje izlazne datoteke moraju se nalaziti sve datoteke zaglavlja simulatora, libSimulator.a (library generiran pomocu programa cmake), main.cpp (minimalna potrebna konfiguracija) i ulaz.txt (format prve ili druge inacice).
+
+Library se generira sa alatom cmake. U komandnoj liniji se pozicionirajte u build direktorij te pokrenite naredbu cmake .. te zatim make. NAPOMENA: Potrebno je skinuti cmake sa interneta i uvjeriti se da je uspjesno instaliran prije pokretanja navedenih naredbi.
+
+Za generiranje a.out datoteke koristi se naredba: g++ main.cpp -L./build -lSimulator -Iheaders/
+Za pokretanje izlazne datoteke koristi se naredba: ./a.out

@@ -1,0 +1,391 @@
+Loading configuration from: ulaz.txt
+Creating initial state...
+Crane Move Time: 10
+Crane Lower Time: 2
+Crane Lift Time: 2
+Clearing Time: 60
+
+Running A* search for multiple solutions...
+
+╔════════════════════════════════════════════════╗
+║           BEST SOLUTION DETAILS                ║
+╚════════════════════════════════════════════════╝
+
+Step 0:
+
+╔══════════════════════════════════════════╗
+║ State at time:      0 seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness:      0 sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 0 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60) B92(due:89) B97(due:72)
+║ Stack 1 (Buffer)   : B91(due:130) B94(due:165)
+║ Stack 2 (Buffer)   : B96(due:85) B95(due:48)
+║ Stack 3 (Buffer)   : B93(due:105)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Initial state               ║
+║ Accumulated cost: 0.0                    ║
+╚══════════════════════════════════════════╝
+
+Step 1:
+
+╔══════════════════════════════════════════╗
+║ State at time: 24     seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 0      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 2 holding B95             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60) B92(due:89) B97(due:72)
+║ Stack 1 (Buffer)   : B91(due:130) B94(due:165)
+║ Stack 2 (Buffer)   : B96(due:85)
+║ Stack 3 (Buffer)   : B93(due:105)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B95 from stack 2  ║
+║ Accumulated cost: 24.0                   ║
+╚══════════════════════════════════════════╝
+
+Step 2:
+
+╔══════════════════════════════════════════╗
+║ State at time: 48     seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 0      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60) B92(due:89) B97(due:72)
+║ Stack 1 (Buffer)   : B91(due:130) B94(due:165)
+║ Stack 2 (Buffer)   : B96(due:85)
+║ Stack 3 (Buffer)   : B93(due:105)
+║ Stack 4 (Outgoing) : B95(due:48)[Exittime: 60s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B95 on stack 4 (EXIT) ║
+║ Accumulated cost: 48.0                   ║
+╚══════════════════════════════════════════╝
+
+Step 3:
+
+╔══════════════════════════════════════════╗
+║ State at time: 72     seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 0      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 2 holding B96             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 12s] B92(due:89) B97(due:72)
+║ Stack 1 (Buffer)   : B91(due:130) B94(due:165)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : B93(due:105)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B96 from stack 2  ║
+║ Accumulated cost: 72.0                   ║
+╚══════════════════════════════════════════╝
+
+Step 4:
+
+╔══════════════════════════════════════════╗
+║ State at time: 96     seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 9      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 36s] B92(due:89)[LATE by 7s] B97(due:72)[LATE by 24s]
+║ Stack 1 (Buffer)   : B91(due:130) B94(due:165)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : B93(due:105)
+║ Stack 4 (Outgoing) : B96(due:85)[LATE by 11s][Exittime: 120s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B96 on stack 4 (EXIT) ║
+║ Accumulated cost: 96.0                   ║
+╚══════════════════════════════════════════╝
+
+Step 5:
+
+╔══════════════════════════════════════════╗
+║ State at time: 130    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 9      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 1 holding B94             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 70s] B92(due:89)[LATE by 41s] B97(due:72)[LATE by 58s]
+║ Stack 1 (Buffer)   : B91(due:130)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : B93(due:105)[LATE by 25s]
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B94 from stack 1  ║
+║ Accumulated cost: 130.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 6:
+
+╔══════════════════════════════════════════╗
+║ State at time: 164    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 9      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 104s] B92(due:89)[LATE by 75s] B97(due:72)[LATE by 92s]
+║ Stack 1 (Buffer)   : B91(due:130)[LATE by 34s]
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : B93(due:105)[LATE by 59s]
+║ Stack 4 (Outgoing) : B94(due:165)[Exittime: 180s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B94 on stack 4 (EXIT) ║
+║ Accumulated cost: 164.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 7:
+
+╔══════════════════════════════════════════╗
+║ State at time: 178    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 9      sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 3 holding B93             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 118s] B92(due:89)[LATE by 89s] B97(due:72)[LATE by 106s]
+║ Stack 1 (Buffer)   : B91(due:130)[LATE by 48s]
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B94(due:165)[LATE by 13s][Exittime: 180s]
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B93 from stack 3  ║
+║ Accumulated cost: 178.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 8:
+
+╔══════════════════════════════════════════╗
+║ State at time: 192    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 103    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 132s] B92(due:89)[LATE by 103s] B97(due:72)[LATE by 120s]
+║ Stack 1 (Buffer)   : B91(due:130)[LATE by 62s]
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B93(due:105)[LATE by 87s][Exittime: 240s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B93 on stack 4 (EXIT) ║
+║ Accumulated cost: 192.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 9:
+
+╔══════════════════════════════════════════╗
+║ State at time: 226    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 103    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 1 holding B91             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 166s] B92(due:89)[LATE by 137s] B97(due:72)[LATE by 154s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B93(due:105)[LATE by 121s][Exittime: 240s]
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B91 from stack 1  ║
+║ Accumulated cost: 226.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 10:
+
+╔══════════════════════════════════════════╗
+║ State at time: 240    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 103    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 2 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 180s] B92(due:89)[LATE by 151s] B97(due:72)[LATE by 168s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : B91(due:130)[LATE by 110s]
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Put down B91 on stack 2     ║
+║ Accumulated cost: 240.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 11:
+
+╔══════════════════════════════════════════╗
+║ State at time: 244    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 103    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 2 holding B91             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 184s] B92(due:89)[LATE by 155s] B97(due:72)[LATE by 172s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B91 from stack 2  ║
+║ Accumulated cost: 244.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 12:
+
+╔══════════════════════════════════════════╗
+║ State at time: 268    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 342    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 208s] B92(due:89)[LATE by 179s] B97(due:72)[LATE by 196s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B91(due:130)[LATE by 138s][Exittime: 300s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B91 on stack 4 (EXIT) ║
+║ Accumulated cost: 268.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 13:
+
+╔══════════════════════════════════════════╗
+║ State at time: 312    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 342    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 0 holding B97             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 252s] B92(due:89)[LATE by 223s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B97 from stack 0  ║
+║ Accumulated cost: 312.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 14:
+
+╔══════════════════════════════════════════╗
+║ State at time: 356    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 966    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 296s] B92(due:89)[LATE by 267s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B97(due:72)[LATE by 284s][Exittime: 360s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B97 on stack 4 (EXIT) ║
+║ Accumulated cost: 356.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 15:
+
+╔══════════════════════════════════════════╗
+║ State at time: 400    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 966    sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 0 holding B92             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 340s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B92 from stack 0  ║
+║ Accumulated cost: 400.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 16:
+
+╔══════════════════════════════════════════╗
+║ State at time: 444    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 2285   sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : B90(due:60)[LATE by 384s]
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B92(due:89)[LATE by 355s][Exittime: 480s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B92 on stack 4 (EXIT) ║
+║ Accumulated cost: 444.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 17:
+
+╔══════════════════════════════════════════╗
+║ State at time: 488    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 2285   sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 0 holding B90             ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : (empty)
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : (empty)
+╠══════════════════════════════════════════╣
+║ Last action: Picked up B90 from stack 0  ║
+║ Accumulated cost: 488.0                  ║
+╚══════════════════════════════════════════╝
+
+Step 18:
+
+╔══════════════════════════════════════════╗
+║ State at time: 532    seconds          ║
+╠══════════════════════════════════════════╣
+║ Exited containers lateness: 5040   sec    ║
+╠══════════════════════════════════════════╣
+║ Crane at stack 4 (empty)                 ║
+╠══════════════════════════════════════════╣
+║ Stack 0 (Entry)    : (empty)
+║ Stack 1 (Buffer)   : (empty)
+║ Stack 2 (Buffer)   : (empty)
+║ Stack 3 (Buffer)   : (empty)
+║ Stack 4 (Outgoing) : B90(due:60)[LATE by 472s][Exittime: 540s]
+╠══════════════════════════════════════════╣
+║ Last action: Put down B90 on stack 4 (EXIT) ║
+║ Accumulated cost: 532.0                  ║
+╚══════════════════════════════════════════╝
+
+Final Statistics:
+Total Cost: 5040.5 seconds
+Total Lateness: 5040.0 seconds
+
+╔════════════════════════════════════════════════════╗
+║              ALL SOLUTIONS FOUND                   ║
+╚════════════════════════════════════════════════════╝
+
+Total solutions found: 1
+
+=== A* Search Statistics ===
+Nodes expanded: 523804
+Nodes generated: 584215
+Duplicates detected: 800983
+Solutions found: 1
+Solutions time: 13.1
+Effective branching factor: 1.12
