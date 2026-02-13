@@ -1,0 +1,7 @@
+/home/borna/ZavrsniRad/build/CMakeFiles/Simulator.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/edit_cache.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/rebuild_cache.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/list_install_components.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/install.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/install/local.dir
+/home/borna/ZavrsniRad/build/CMakeFiles/install/strip.dir
