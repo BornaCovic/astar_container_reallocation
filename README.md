@@ -1,6 +1,6 @@
 # Container Reallocation Optimization using A*
 
-This project implements an A* based solver for the container relocation problem inspired by automated port storage systems.
+This project implements an A* based solver for the container relocation problem inspired by automated port storage systems using C++.
 
 The system models a simplified container yard with one entry stack, three buffer stacks, one outgoing stack, and a single crane that can move containers between them. Each container has an arrival time and a due time, and the objective is to minimize the total lateness of all containers leaving the system.
 
